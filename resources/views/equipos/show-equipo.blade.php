@@ -14,5 +14,12 @@
     </ul>
     <hr>
     <a href="{{ route('equipos.edit', $equipo) }}">Editar</a>
+    <form action="{{ route('equipos.destroy', $equipo) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit">
+            Eliminar
+        </button>
+    </form>
 </body>
 </html>
