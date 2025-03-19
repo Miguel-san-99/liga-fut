@@ -17,4 +17,10 @@ class EquipoControllerTest extends TestCase
         $response->assertSee('Equipos');
         $response->assertStatus(200);
     }
+    public function test_crear_nuevo_equipo(): void
+    {
+        $equipo = Equipo::factory()->make();
+
+        $response = $this->post('');
+    }
 }
